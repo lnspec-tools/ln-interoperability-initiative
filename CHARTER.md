@@ -1,32 +1,18 @@
-# {{GROUP_NAME}} Charter
-<!--
- Provide an introduction summarising the goals and motivation behind your
- project group.
--->
+# "Async Main and Test" Charter
 
 ## Goals
 
-<!--
- Explain what changes you'd like to see your group your group to focus on, and
- how you plan to approach these issues. Focus on explaining the highest possible
- level of your change.
--->
-
-## Constraints And Considerations
-
-<!--
- Explain the scope of your group, what you have chosen not to include in
- your goals, and your motivations behind making them non-goals.
--->
-
+```rust
+/// waiting resolution charter goal
+async fn goal(&mut self) {
+    self.goal.await?;
+}
+```
 
 ## Membership
 
-<!--
- Mention your initial membership and who has decided take the roles of
- shepherd(s) and liason.
--->
+| Role | Github |
+| ---  | --- |
+| [Owner] | [vincenzopalazzo](https://github.com/vincenzopalazzo) | 
 
-**Shepherd:**
-**Team Liason:**
-**Members:**
+[Owner]: https://lang-team.rust-lang.org/initiatives/process/roles/owner.html

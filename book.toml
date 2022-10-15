@@ -1,9 +1,9 @@
 [book]
-authors = ["{{GROUP_NAME}} Members"]
+authors = ["Vincenzo Palazzo <vincenzopalazzodev@gmail.com>"]
 language = "en"
 multilingual = false
 src = "."
-title = "{{GROUP_NAME}} {{GROUP_TYPE}} Group"
+title = "Async Main and Test initiative"
 
 [output.html]
 no-section-label=true
