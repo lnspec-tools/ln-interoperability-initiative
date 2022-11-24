@@ -1,9 +1,4 @@
 # Async Main and Test initiative
-<!--
- Status badge advertising the project as being actively worked on. When the
- project has finished be sure to replace the active badge with a badge
- like: https://img.shields.io/badge/status-archived-grey.svg
--->
 ![project group status: active](https://img.shields.io/badge/status-active-brightgreen.svg)
 [![project group documentation](https://img.shields.io/badge/MDBook-View%20Documentation-blue)][gh-pages]
 
@@ -13,7 +8,7 @@ as our [github pages website][gh-pages] for more information on our goals and
 current scope.
 
 [charter]: ./CHARTER.md
-[gh-pages]: https://rust-lang.github.io/{{GROUP_SLUG}}
+[gh-pages]: https://vincenzopalazzo.github.io/async-main-and-tests-initiative
 
 ## Current status
 

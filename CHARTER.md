@@ -2,12 +2,10 @@
 
 ## Goals
 
-```rust
-/// waiting resolution charter goal
-async fn goal(&mut self) {
-    self.goal.await?;
-}
-```
+This working group is focused around implementing and design one of the last 
+steps to make the [async-wg vision](https://rust-lang.github.io/wg-async/vision.html) real.
+In particular, we are focusing to find a way to be able to have an async main, and tests 
+out of the box without need a third party library.
 
 ## Membership
 
