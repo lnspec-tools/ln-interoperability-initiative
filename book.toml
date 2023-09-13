@@ -1,0 +1,10 @@
+[book]
+authors = ["Vincenzo Palazzo <vincenzopalazzodev@gmail.com>"]
+language = "en"
+multilingual = false
+src = "."
+title = "Lightning Network Interoperability Initiative"
+
+[output.html]
+no-section-label=true
+git-repository-url="https://github.com/lnspec-tools/ln-iterability-initiative.git"
