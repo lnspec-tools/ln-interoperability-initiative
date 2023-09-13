@@ -1,8 +1,3 @@
-# RFC drafts
+# Proposals
 
-```rust
-/// waiting resolution rfc goal
-async fn rfc(&mut self) {
-    self.goal.await?;
-}
-```
+No proposal are currently done

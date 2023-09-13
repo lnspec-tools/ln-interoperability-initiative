@@ -1,8 +1,8 @@
-# Async Main and Test initiative
+# Lightning Network Interoperability Initiative
 ![project group status: active](https://img.shields.io/badge/status-active-brightgreen.svg)
 [![project group documentation](https://img.shields.io/badge/MDBook-View%20Documentation-blue)][gh-pages]
 
-Welcome to the repository for the _Async on Main and Test Initiative!_ This is the
+Welcome to the repository for the _Lightning Network Interoperability Initiative_ This is the
 repository we use to organise our work. Please refer to our [charter] as well
 as our [github pages website][gh-pages] for more information on our goals and
 current scope.
@@ -12,7 +12,8 @@ current scope.
 
 ## Current status
 
-The following table lists of the stages of an initiative, along with links to the artifacts that will be produced by the start of that stage.
+The following table lists of the stages of an initiative, along with 
+links to the artifacts that will be produced by the start of that stage.
 
 | Stage                                 | State | Artifact(s) |
 | ------------------------------------- | ----- | ----------- |
@@ -33,9 +34,8 @@ Key:
 If you'd like to participate be sure to check out any of our [open issues] on this
 repository.
 
-We also participate on [async-wg zulip steam][chat-link], feel free to introduce
+We also participate on [interop-wg zulip steam][chat-link], feel free to introduce
 yourself over there and ask us any questions you have.
-
 
 [open issues]: https://github.com/vincenzopalazzo/async-main-and-tests-initiative/issues
 [chat-link]: https://rust-lang.zulipchat.com/#narrow/stream/187312-wg-async
