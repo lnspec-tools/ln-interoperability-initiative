@@ -22,3 +22,19 @@ Therefore, any implementation wishing to support lnprototest should create a sim
 runner for the implementation itself. Subsequently, they can utilize the lnprototest utilities to craft an integration test.
 
 For further details on how to implement a lnprototest test, please refer to the latest lnprototest documentation.
+
+### Challenge
+
+While lnprototest requires a simple runner to be implemented for each
+implementation, it would be highly beneficial to develop a minimal common API 
+across all implementations. This would facilitate easier integration within the framework.
+
+Moreover, a standardized (minimal) API could enable the creation of integration frameworks
+similar to [pyln-testing](https://pypi.org/project/pyln-testing/) from core lightning. This would, in turn, allow for writing integration
+tests that span multiple implementations.
+
+As an illustrative example, you can find an integration test for an unreleased lightning node
+(built with LDK) that's tested alongside core lightning
+[here](https://git.hedwing.dev/dev-crew/lampo.rs/src/branch/main/tests/tests).
+
+Some initial framework is available at https://github.com/laanwj/cln4rust/tree/master/testing
