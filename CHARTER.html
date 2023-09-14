@@ -180,14 +180,16 @@ includes within its own codebase.</p>
 <p>While tests like these are essential—because there are scenarios that can 
 only be discovered when testing on the Bitcoin network, such as a &quot;Fee Spike&quot;—there are 
 numerous cases where potential issues could be identified before deploying an implementation in a real-world setting.</p>
-<p><em>TODO: Provide evidence to support the above statement.</em></p>
+<p>An example of this is the recent splicing issues https://github.com/ElementsProject/lightning/issues/6500 between
+CLN and Eclair.</p>
 <p>The primary objective of this working group is to develop testing 
 tools that are language-agnostic and can facilitate the following types of integration tests:</p>
 <ul>
 <li><strong>Vertical Integration Testing</strong>: An implementation must be tested alongside other implementations.</li>
 <li><strong>Horizontal Integration Testing</strong>: An implementation must be tested with a protocol testing framework 
 to ensure that the specification is clear and that the implementation adheres 
-to the specification correctly. (<em>TODO: Include the splice example.</em>)</li>
+to the specification correctly. An example of this is the following PR on CLN https://github.com/ElementsProject/lightning/pull/6384
+were lnprototest was able to hit an edge case and allow core lightning to accept invalid signature during the <code>announcement_signatures</code></li>
 <li><strong>Self Integration Testing</strong>: An implementation must be tested for compliance with its own 
 standards (note: most major implementations are currently doing this).</li>
 </ul>

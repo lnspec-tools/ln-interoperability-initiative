@@ -173,7 +173,7 @@
                         <h1 id="lightning-network-interoperability-initiative"><a class="header" href="#lightning-network-interoperability-initiative">Lightning Network Interoperability Initiative</a></h1>
 <p><img src="https://img.shields.io/badge/status-active-brightgreen.svg" alt="project group status: active" />
 <a href="https://vincenzopalazzo.github.io/async-main-and-tests-initiative"><img src="https://img.shields.io/badge/MDBook-View%20Documentation-blue" alt="project group documentation" /></a></p>
-<p>Welcome to the repository for the <em>Lightning Network Interoperability Initiative</em> This is the
+<p>Welcome to the repository for the <em>Lightning Network Interoperability Initiative</em>. This is the
 repository we use to organise our work. Please refer to our <a href="./CHARTER.html">charter</a> as well
 as our <a href="https://vincenzopalazzo.github.io/async-main-and-tests-initiative">github pages website</a> for more information on our goals and
 current scope.</p>
@@ -211,14 +211,16 @@ includes within its own codebase.</p>
 <p>While tests like these are essential—because there are scenarios that can 
 only be discovered when testing on the Bitcoin network, such as a &quot;Fee Spike&quot;—there are 
 numerous cases where potential issues could be identified before deploying an implementation in a real-world setting.</p>
-<p><em>TODO: Provide evidence to support the above statement.</em></p>
+<p>An example of this is the recent splicing issues https://github.com/ElementsProject/lightning/issues/6500 between
+CLN and Eclair.</p>
 <p>The primary objective of this working group is to develop testing 
 tools that are language-agnostic and can facilitate the following types of integration tests:</p>
 <ul>
 <li><strong>Vertical Integration Testing</strong>: An implementation must be tested alongside other implementations.</li>
 <li><strong>Horizontal Integration Testing</strong>: An implementation must be tested with a protocol testing framework 
 to ensure that the specification is clear and that the implementation adheres 
-to the specification correctly. (<em>TODO: Include the splice example.</em>)</li>
+to the specification correctly. An example of this is the following PR on CLN https://github.com/ElementsProject/lightning/pull/6384
+were lnprototest was able to hit an edge case and allow core lightning to accept invalid signature during the <code>announcement_signatures</code></li>
 <li><strong>Self Integration Testing</strong>: An implementation must be tested for compliance with its own 
 standards (note: most major implementations are currently doing this).</li>
 </ul>
@@ -242,6 +244,16 @@ as a runner capable of communicating using the Lightning Network protocol over a
 <p>Therefore, any implementation wishing to support lnprototest should create a simple Python 
 runner for the implementation itself. Subsequently, they can utilize the lnprototest utilities to craft an integration test.</p>
 <p>For further details on how to implement a lnprototest test, please refer to the latest lnprototest documentation.</p>
+<h3 id="challenge"><a class="header" href="#challenge">Challenge</a></h3>
+<p>While lnprototest requires a simple runner to be implemented for each
+implementation, it would be highly beneficial to develop a minimal common API 
+across all implementations. This would facilitate easier integration within the framework.</p>
+<p>Moreover, a standardized (minimal) API could enable the creation of integration frameworks
+similar to <a href="https://pypi.org/project/pyln-testing/">pyln-testing</a> from core lightning. This would, in turn, allow for writing integration
+tests that span multiple implementations.</p>
+<p>As an illustrative example, you can find an integration test for an unreleased lightning node
+(built with LDK) that's tested alongside core lightning
+<a href="https://git.hedwing.dev/dev-crew/lampo.rs/src/branch/main/tests/tests">here</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="meetings"><a class="header" href="#meetings">Meetings</a></h1>
 <p>No meetings are currently running.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="proposals"><a class="header" href="#proposals">Proposals</a></h1>
